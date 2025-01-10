@@ -126,6 +126,7 @@ curl -X 'POST' \
 ### Improvement Opportunities
 - The model could be improved by further tuning hyperparameters or experimenting with different algorithms (e.g., Random Forest, Gradient Boosting).
 - I could also explore additional features (e.g., condition, year of manufacture) and refine the handling of missing values and outliers.
+- Applying DVC (Data Version Control) to track data and models effectively and securely. 
 
 ## 6. Summary
 

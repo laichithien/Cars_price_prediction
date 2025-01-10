@@ -68,7 +68,7 @@ This streamlined approach simplifies the decision-making process, allowing buyer
 
 ### Performance Metrics
 - I decided to focus on **SMAPE** (Symmetric Mean Absolute Percentage Error) and **MAE** to evaluate the performance of the models, as SMAPE can capture the relative errors more effectively, especially for rare but high-value cars.
-- The proposed weight for the combined metric is: **70% SMAPE and 30% MAE**. This weight reflects the importance of capturing errors for high-value cars while also considering overall prediction accuracy.
+- The proposed weight for the combined metric is: **60% SMAPE and 40% MAE**. This weight reflects the importance of capturing errors for high-value cars while also considering overall prediction accuracy.
 
 ![alt text](images/evaluate.png)
 

@@ -1,6 +1,7 @@
 # Technical Test Report: Car Price Prediction Model
 
-This report provides a summary of the assignment. For more detailed information on data processing and other aspects, please refer to the notebook located at `notebooks/research.ipynb`.
+This report provides a summary of the assignment. For more detailed information on data processing and other aspects, please refer to the notebook located at [notebooks/research.ipynb](notebooks/research.ipynb).
+
 
 ## 1. Data Preprocessing
 

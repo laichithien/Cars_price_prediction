@@ -39,29 +39,29 @@ async def predict_price(
         - loss: Loss type (e.g., 'mse', 'mae').
         - method: Model type (e.g., 'xgb').
     """
-    # try:
+    try:
     # Dynamically construct paths for the model and preprocessor
-    model_path = f"models/models_v2/{method}_{loss}_model{version}.pkl"
-    transformer_path = f"models/models_v2/preprocessor{version}.pkl"
+        model_path = f"models/models_v2/{method}_{loss}_model{version}.pkl"
+        transformer_path = f"models/models_v2/preprocessor{version}.pkl"
 
-    print(model_path)
-    print(transformer_path)
+        print(model_path)
+        print(transformer_path)
 
-    # Load the appropriate model and transformer
-    ml_model = ML_Model(MODEL_PATH=model_path, TRANSFORMER_PATH=transformer_path)
+        # Load the appropriate model and transformer
+        ml_model = ML_Model(MODEL_PATH=model_path, TRANSFORMER_PATH=transformer_path)
 
-    # Convert features to dictionary and predict price
-    features_dict = features.dict()
-    price = ml_model.predict_price(features=features_dict)
+        # Convert features to dictionary and predict price
+        features_dict = features.dict()
+        price = ml_model.predict_price(features=features_dict)
 
-    # Format and return prediction
-    price = float(round(price, 2))
-    return {
-        "predicted_price": price,
-        "version": version,
-        "loss": loss,
-        "method": method,
-    }
+        # Format and return prediction
+        price = float(round(price, 2))
+        return {
+            "predicted_price": price,
+            "version": version,
+            "loss": loss,
+            "method": method,
+        }
 
-    # except Exception as e:
-    #     raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
